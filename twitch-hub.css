@@ -1,0 +1,71 @@
+#stream_div
+{
+margin-top:50px;
+background-color: #333;
+width: 620px;
+overflow:hidden;
+max-height:378px;
+border:solid 2px white;
+}
+#stream_frame
+{
+float:left;
+}
+p
+{
+overflow:hidden;
+}
+#views
+{
+float:right;
+}
+#name
+{
+float:left;
+}
+#streams
+{
+background-color:#333;
+float: left;
+width: 326px;
+margin-top:50px;
+max-height: 378px;
+overflow-x: hidden;
+overflow-y: scroll;
+border: solid 2px;
+
+}
+#stream
+{
+border: 1px solid black;
+padding:10px;
+float:left;
+width:94%;
+}
+#stream:hover
+{
+background-color:#262626;
+}
+#name, #views
+{
+color:#F1EFA6;
+font-family: "Fjalla One",sans-serif;
+}
+#viewer_icon
+{
+padding-top:14px;
+padding-right:10px;
+float:right;
+width:24px;
+height:24px;
+}
+#live_icon
+{
+float: left;
+width: 12px;
+height: 12px;
+padding-top: 20;
+padding-right:5px;
+}
+                                                                                                                                                                                                                                           181,1         Bot
+
