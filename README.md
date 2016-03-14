@@ -9,10 +9,15 @@ then you will want to make a database table with these properties
 
 
 | id                  | int(6)              | NO   | PRI    | NULL    | auto_increment |
+
 | stream_display_name | varchar(255)        | NO   |        | NULL    |                |
+
 | embed_code          | varchar(255)        | NO   |        | NULL    |                |
+
 | views               | int(255)            | NO   |        | NULL    |                |
+
 | pos                 | int(255)            | NO   |        | NULL    |                |
+
 | time                | int(255)            | NO   |        | NULL    |                |
 
 
