@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+		<link href="test.css" media="all" rel="stylesheet" type="text/css" />
+		<script>
+		var streams_array = [];
+
+			$(document).ready(function() {
+				$.getJSON('stream_graber.php', function(data) {
+					streams_array = data;
+					var streams = $('#streams');
+					var player = $('#player');
+					$(player).append(data[0].embed_code);
+					for (var i = 0; i < data.length; i++) {
+						$(streams).append("<div class='stream' id='"+ data[i].pos + "'><img class='live_icon' src='web_icons/1457364222'></img><p class='name'>" + data[i].stream_display_name + "</p><p class='views'>" + data[i].views + "</p><img class='viewer_icon' src='web_icons/1457363792'></img></div>");	
+					}
+					$('.stream').on('click',function(e) {
+                    	e.preventDefault();
+                    	var pos = $(this).attr('id'); 
+                    	console.log(streams_array);
+						$('#player').empty(); 
+						$('#player').html(streams_array[pos]['embed_code']);
+						
+                	});
+
+				});
+                
+            });
+
+
+		</script>
+	</head>
+	<body>
+	<div id='twitch-hub'>
+		<div id='player'></div>
+		<div id='streams'></div>
+	</div>
+	</body>
+</html>
