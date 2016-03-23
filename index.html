@@ -81,16 +81,20 @@
             border:1px solid black; 
             background-color: #B2B1C5;
             margin-bottom:15px;
-       }
-       .code-text
-       {
+        }
+        .code-text
+        {
            color:#1700F3;
-       }
-       .database
-       {
-            border:solid 1px black; 
-            margin:0px;
-       }
+        }
+        table, td, th
+        {
+            border:solid 1px black;
+            padding:5px;  
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
         </style>
     <head>
     <body>
@@ -105,16 +109,69 @@
             </p>
                 <img class='stream-hub' src="stream-hub.png"> </img>    
             <p class='how-it-works'> 
-                First we want to make a table in our database with the following scheam
+                First we want to make a table in our database useing the following scheam. 
             </p>    
                 <table>
                         <tr>
-                            <th class='database'> id </th>
-                            <th class='database'> stream_display_name </th>
-                            <th class='database'> embed_code </th>
-                            <th class='database'> views </th>
-                            <th class='database'> pos </th>
-                            <th class='database'> time </th>
+                            <th> Field   </th>
+                            <th> Type    </th>
+                            <th> Null    </th>
+                            <th> Key     </th>
+                            <th> Default </th>
+                            <th> Extra   </th>
+                        </tr>
+                        <tr>
+                            <th> Id             </th>
+                            <th> Int (255)      </th>
+                            <th> No             </th>
+                            <th> Primary        </th>
+                            <th> Null           </th>
+                            <th> Auto_increment </th>
+                        </tr>
+                        <tr>
+                            <th> stream_display_name   </th>
+                            <th> varchar (255)         </th>
+                            <th> No                    </th>
+                            <th> Primary               </th>
+                            <th> Null                  </th>
+                            <th> </th>
+
+                        </tr>
+                        <tr>
+                            <th> embed_code     </th>
+                            <th> varchar (255)  </th>
+                            <th> No             </th>
+                            <th> Primary        </th>
+                            <th> Null           </th>
+                            <th> </th>
+
+                        </tr>
+                        <tr>
+                            <th> views          </th>
+                            <th> int (255)      </th>
+                            <th> No             </th>
+                            <th> Primary        </th>
+                            <th> Null           </th>
+                            <th></th>
+
+                        </tr>
+                        <tr>
+                            <th> pos            </th>
+                            <th> Int (255)      </th>
+                            <th> No             </th>
+                            <th> Primary        </th>
+                            <th> Null           </th>
+                            <th> </th>
+
+                        </tr>
+                        <tr>
+                            <th> time           </th>
+                            <th> Int (255)           </th>
+                            <th> No             </th>
+                            <th> Primary        </th>
+                            <th> Null           </th>
+                            <th> </th>
+
                        </tr>
                 </table>
             
