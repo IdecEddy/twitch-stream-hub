@@ -53,9 +53,9 @@
         }
         .info-header, .how-it-works
         {
+            color:#3B3B3B;
             max-width:900px;
             text-align:center;
-            margin-top:85px;
             font-family: 'Quattrocento Sans', sans-serif;
             font-size:30px;
         }
@@ -79,8 +79,10 @@
             align-items: center;
             height:80px;
             border:1px solid black; 
-            background-color: #B2B1C5;
+            border: 1px solid #B5B6B7;
             margin-bottom:15px;
+            background-color: #fff;
+            box-shadow:2px 2px 2px #B5B6B7;
         }
         .code-text
         {
@@ -95,6 +97,20 @@
         {
             border-collapse: collapse;
         }
+        .tiles
+        {
+            padding-left:10px;
+            padding-right:10px;
+            box-shadow:2px 2px 2px #B5B6B7;
+            background-color:white;
+            padding-bottom:30px;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            display:flex;
+            margin-top:50px;
+            border: solid 1px #B5B6B7; 
+        }
         </style>
     <head>
     <body>
@@ -103,93 +119,101 @@
            <p class='sub-title'> A Solution To Brings Twitch Streams Together. </p>
            <img class='stream-hub-img' src="stream-hub-site.png"> </img>
         </section>
+        
         <section class="info">
-            <p class='info-header'> 
-                Twitch-Hub is simple Twitch Api scrubber for building elegant twitch viewing platforms.
-            </p>
+            <span class='tiles'>    
+                <p class='info-header'> 
+                    Twitch-Hub is simple Twitch Api scrubber for building elegant twitch viewing platforms.
+                </p>
                 <img class='stream-hub' src="stream-hub.png"> </img>    
-            <p class='how-it-works'> 
-                First we want to make a table in our database useing the following scheam. 
-            </p>    
+            </span>
+        
+            <span class='tiles'>
+                <p class='how-it-works'> 
+                    First we want to make a table in our database useing the following scheam. 
+                </p>    
                 <table>
-                        <tr>
-                            <th> Field   </th>
-                            <th> Type    </th>
-                            <th> Null    </th>
-                            <th> Key     </th>
-                            <th> Default </th>
-                            <th> Extra   </th>
-                        </tr>
-                        <tr>
-                            <th> Id             </th>
-                            <th> Int (255)      </th>
-                            <th> No             </th>
-                            <th> Primary        </th>
-                            <th> Null           </th>
-                            <th> Auto_increment </th>
-                        </tr>
-                        <tr>
-                            <th> stream_display_name   </th>
-                            <th> varchar (255)         </th>
-                            <th> No                    </th>
-                            <th> Primary               </th>
-                            <th> Null                  </th>
-                            <th> </th>
-
-                        </tr>
-                        <tr>
-                            <th> embed_code     </th>
-                            <th> varchar (255)  </th>
-                            <th> No             </th>
-                            <th> Primary        </th>
-                            <th> Null           </th>
-                            <th> </th>
-
-                        </tr>
-                        <tr>
-                            <th> views          </th>
-                            <th> int (255)      </th>
-                            <th> No             </th>
-                            <th> Primary        </th>
-                            <th> Null           </th>
-                            <th></th>
-
-                        </tr>
-                        <tr>
-                            <th> pos            </th>
-                            <th> Int (255)      </th>
-                            <th> No             </th>
-                            <th> Primary        </th>
-                            <th> Null           </th>
-                            <th> </th>
-
-                        </tr>
-                        <tr>
-                            <th> time           </th>
-                            <th> Int (255)           </th>
-                            <th> No             </th>
-                            <th> Primary        </th>
-                            <th> Null           </th>
-                            <th> </th>
-
-                       </tr>
+                    <tr>
+                        <th> Field   </th>
+                        <th> Type    </th>
+                        <th> Null    </th>
+                        <th> Key     </th>
+                        <th> Default </th>
+                        <th> Extra   </th>
+                    </tr>
+                    <tr>
+                        <th> Id             </th>
+                        <th> Int (255)      </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th> Auto_increment </th>
+                    </tr>
+                    <tr>
+                        <th> stream_display_name   </th>
+                        <th> varchar (255)         </th>
+                        <th> No                    </th>
+                        <th> Primary               </th>
+                        <th> Null                  </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> embed_code     </th>
+                        <th> varchar (255)  </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> views          </th>
+                        <th> int (255)      </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th> pos            </th>
+                        <th> Int (255)      </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> time           </th>
+                        <th> Int (255)           </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th> </th>
+                   </tr>
                 </table>
+            </span>
             
-            <p class='how-it-works'>
-                Then we make a Cron-Job to run our scrubbing script every minute storing the info in a MySQL database.
-            </p>
+            <span class='tiles'>
+                <p class='how-it-works'>
+                    Then we make a Cron-Job to run our scrubbing script every minute storing the info in a MySQL database.
+                </p>
                 <span class='code'>
                     <p class='code-text'> * * * * * cd /var/www/html/exe && ./stream_hub_cron.php >/dev/null 2>/dev/null </p>            
                 </span>
                 <img class='cron-tab' src='crontab.png'></img>
-            <p class='how-it-works'>
+            </span>
             
-                Once our cronjob is made we grab all that info from the database  and encode it into a json object.
-            </p>
-            <img class'jason' src='jsonobj.png'> </img>           
+            <span class='tiles'>
+                <p class='how-it-works'>
+                    Once our cronjob is made we grab all that info from the database  and encode it into a json object.
+                </p>
+                <img class'jason' src='jsonobj.png'> </img>           
+            </span>
+           
+            <span class='tiles'>
             <p class='how-it-works'>
                 finaly we take elements from that object to and style it any way we like.
             </p> 
+            </span>
         </section>
     </body>
 <html> 
