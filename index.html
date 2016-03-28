@@ -3,6 +3,7 @@
         <title> Stream Hub </title>
         <link href='https://fonts.googleapis.com/css?family=Rubik:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <style> 
         body
         {
@@ -45,7 +46,7 @@
         {
             margin-top:86px;
         }
-        .info
+        .info, .install
         {
             display:flex;
             flex-direction:column;
@@ -137,7 +138,7 @@
             padding:0px;
             background-color: #333;
         }
-        .navbar_li
+        .navbar_what_is_it, .navbar_install
         {
             border-right: 1px solid white;
             color:#fff;
@@ -145,12 +146,48 @@
             font-size:20px;
             float:left;
         }
-        .navbar_li:hover
+        .navbar_what_is_it:hover, .navbar_install:hover
         {
             color:black;
             background-color:#4CAF50;
         }
+        .navbar_what_is_it:active, .navbar_install:active
+        {
+            color:black;
+            background-color:#4CAF50;
+        }
+
         </style>
+        <script>
+            $(document).ready(function() {
+                var info = 1;
+                var install = 0;
+                $('.info').show();
+                $('.install').hide();
+                $('.navbar_what_is_it').on('click',function(e) {
+                    if(info == 0){
+                        $('.info').show();
+                        $('.install').hide();
+                        install = 0;
+                        info = 1;
+                    }
+                    if(info == 0 && install == 0){
+                        $('.info').show();   
+                    }
+                });
+                $('.navbar_install').on('click',function(e){
+                    if(install == 0){
+                        $('.install').show();
+                        $('.info').hide();
+                        info = 0;
+                        install = 1;
+                    }
+                    if(info == 0 && install == 0){
+                        $('.info').show();
+                    }
+                });
+            });
+        </script>
     <head>
     <body>
         <section class="header">
@@ -161,9 +198,9 @@
 
         <section id='navbar_section'>
             <ul id='navbar_ul'>
-                <li class='navbar_li'>What is it</li>
+                <li class='navbar_what_is_it'>What is it</li>
 
-                <li class='navbar_li'>Installation</li>
+                <li class='navbar_install'>Installation</li>
          
             </ul>
         </section>
@@ -175,7 +212,8 @@
                 </p>
                 <img class='stream-hub' src="website.png"> </img>    
             </span>
-        
+        </section>
+        <section class='install'> 
             <span class='tiles'>
                 <p class='how-it-works'> 
                     First we want to make a table in our database useing the following scheme. 
