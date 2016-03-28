@@ -120,6 +120,36 @@
             width:100%;
             background-color:#222;
         }
+        #navbar_section
+        {
+            margin-top:80px;
+            margin-bottom:30px;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+        }
+        #navbar_ul
+        {
+            border-radius: 20px;
+            overflow:hidden; 
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            background-color: #333;
+        }
+        .navbar_li
+        {
+            border-right: 1px solid white;
+            color:#fff;
+            padding:15px 15px 15px 15px;
+            font-size:20px;
+            float:left;
+        }
+        .navbar_li:hover
+        {
+            color:black;
+            background-color:#4CAF50;
+        }
         </style>
     <head>
     <body>
@@ -127,6 +157,15 @@
            <a class="title-link" href="#">Twitch Hub</a>
            <p class='sub-title'> A Solution To Bring Twitch Streams Together. </p>
            <img class='stream-hub-img' src="website.png"> </img>
+        </section>
+
+        <section id='navbar_section'>
+            <ul id='navbar_ul'>
+                <li class='navbar_li'>What is it</li>
+
+                <li class='navbar_li'>Installation</li>
+         
+            </ul>
         </section>
         
         <section class="info">
@@ -204,7 +243,7 @@
                 </p>
                 <span class='code'>
                     <p class='code-text'>
-                        create table live_streams(id INT(255) NOT NULL AUTO_INCREMENT, stream_display_name VARCHAR(255) NOT NULL, embed_code VARCHAR(255) NOT NULL, views INT(255) NOT NULL, pos INT(255) NOT NULL, time INT(255) NOT NULL, PRIMARY KEY (id));
+                        CREATE TABLE live_streams (id INT(255) NOT NULL AUTO_INCREMENT, stream_display_name VARCHAR(255) NOT NULL, embed_code VARCHAR(255) NOT NULL, views INT(255) NOT NULL, pos INT(255) NOT NULL, time INT(255) NOT NULL, PRIMARY KEY (id));
                     </p>
                 </span>
             </span>
