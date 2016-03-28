@@ -83,6 +83,8 @@
             margin-bottom:15px;
             background-color: #fff;
             box-shadow:2px 2px 2px #B5B6B7;
+            max-width: 670;
+            padding: 20px;
         }
         .code-text
         {
@@ -110,6 +112,13 @@
             display:flex;
             margin-top:50px;
             border: solid 1px #B5B6B7; 
+        }
+        .footer
+        {
+            margin-top:50px; 
+            height:100px;
+            width:100%;
+            background-color:#222;
         }
         </style>
     <head>
@@ -153,7 +162,7 @@
                         <th> stream_display_name   </th>
                         <th> varchar (255)         </th>
                         <th> No                    </th>
-                        <th> Primary               </th>
+                        <th> </th>
                         <th> Null                  </th>
                         <th> </th>
                     </tr>
@@ -161,7 +170,7 @@
                         <th> embed_code     </th>
                         <th> varchar (255)  </th>
                         <th> No             </th>
-                        <th> Primary        </th>
+                        <th> </th>
                         <th> Null           </th>
                         <th> </th>
                     </tr>
@@ -169,7 +178,7 @@
                         <th> views          </th>
                         <th> int (255)      </th>
                         <th> No             </th>
-                        <th> Primary        </th>
+                        <th></th>
                         <th> Null           </th>
                         <th></th>
                     </tr>
@@ -177,7 +186,7 @@
                         <th> pos            </th>
                         <th> Int (255)      </th>
                         <th> No             </th>
-                        <th> Primary        </th>
+                        <th> </th>
                         <th> Null           </th>
                         <th> </th>
                     </tr>
@@ -185,11 +194,19 @@
                         <th> time           </th>
                         <th> Int (255)           </th>
                         <th> No             </th>
-                        <th> Primary        </th>
+                        <th> </th>
                         <th> Null           </th>
                         <th> </th>
                    </tr>
                 </table>
+                <p class='how-it-works'>
+                    Or just use this line of code in MySQL to create your table.
+                </p>
+                <span class='code'>
+                    <p class='code-text'>
+                        create table live_streams(id INT(255) NOT NULL AUTO_INCREMENT, stream_display_name VARCHAR(255) NOT NULL, embed_code VARCHAR(255) NOT NULL, views INT(255) NOT NULL, pos INT(255) NOT NULL, time INT(255) NOT NULL, PRIMARY KEY (id));
+                    </p>
+                </span>
             </span>
             
             <span class='tiles'>
@@ -210,10 +227,15 @@
             </span>
            
             <span class='tiles'>
-            <p class='how-it-works'>
-                Finally we take elements from that object to and style it any way we like.
-            </p> 
+                <p class='how-it-works'>
+                    Finally we take elements from that object to and style it any way we like.
+                </p>
+                <img class='obj_prop' src='obj_prop.png'></img> 
             </span>
+        </section>
+
+        <section class='footer'>
+
         </section>
     </body>
 <html> 
