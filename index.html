@@ -1,0 +1,280 @@
+<html>
+    <head>
+        <title> Stream Hub </title>
+        <link href='https://fonts.googleapis.com/css?family=Rubik:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+        <style> 
+        body
+        {
+            margin:0px; 
+            background-color:#DEDEDE;
+        }
+        .header
+        {
+            padding-top:40px;
+            background-color:#222;
+            width: 100%;
+            height: 633px;
+            display:flex;
+            flex-direction:column;  
+            align-items: center;
+        }
+        .title-link
+        {
+            text-align:center;
+            font-family: 'Rubik', sans-serif;  
+            font-weight: bold;
+            text-decoration: none;
+            color:white;
+            font-size: 40px; 
+            margin-bottom:30px;
+       }
+        .title-link:visited
+        {
+            text-decoration: none;
+            color:white;
+        }
+        .sub-title
+        {
+            text-align:center;
+            color:white;
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-size:30px;
+        }
+        .stream-hub-img
+        {
+            margin-top:86px;
+        }
+        .info
+        {
+            display:flex;
+            flex-direction:column;
+            align-items: center; 
+        }
+        .info-header, .how-it-works
+        {
+            color:#3B3B3B;
+            max-width:900px;
+            text-align:center;
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-size:30px;
+        }
+        .stream-hub
+        {
+            opacity:.8;
+            margin-top:50px;
+            width:500px;
+            height:220px;
+        }
+        .stream-hub:hover
+        {
+            opacity:1; 
+        }
+        .code
+        {
+            margin-top:20px;
+            display:flex;
+            padding-left:20px;
+            padding-right:20px;
+            align-items: center;
+            height:80px;
+            border:1px solid black; 
+            border: 1px solid #B5B6B7;
+            margin-bottom:15px;
+            background-color: #fff;
+            box-shadow:2px 2px 2px #B5B6B7;
+            max-width: 670;
+            padding: 20px;
+        }
+        .code-text
+        {
+           color:#1700F3;
+        }
+        table, td, th
+        {
+            border:solid 1px black;
+            padding:5px;  
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        .tiles
+        {
+            padding-left:10px;
+            padding-right:10px;
+            box-shadow:2px 2px 2px #B5B6B7;
+            background-color:white;
+            padding-bottom:30px;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            display:flex;
+            margin-top:50px;
+            border: solid 1px #B5B6B7; 
+        }
+        .footer
+        {
+            margin-top:50px; 
+            height:100px;
+            width:100%;
+            background-color:#222;
+        }
+        #navbar_section
+        {
+            margin-top:80px;
+            margin-bottom:30px;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+        }
+        #navbar_ul
+        {
+            border-radius: 20px;
+            overflow:hidden; 
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            background-color: #333;
+        }
+        .navbar_li
+        {
+            border-right: 1px solid white;
+            color:#fff;
+            padding:15px 15px 15px 15px;
+            font-size:20px;
+            float:left;
+        }
+        .navbar_li:hover
+        {
+            color:black;
+            background-color:#4CAF50;
+        }
+        </style>
+    <head>
+    <body>
+        <section class="header">
+           <a class="title-link" href="#">Twitch Hub</a>
+           <p class='sub-title'> A Solution To Bring Twitch Streams Together. </p>
+           <img class='stream-hub-img' src="website.png"> </img>
+        </section>
+
+        <section id='navbar_section'>
+            <ul id='navbar_ul'>
+                <li class='navbar_li'>What is it</li>
+
+                <li class='navbar_li'>Installation</li>
+         
+            </ul>
+        </section>
+        
+        <section class="info">
+            <span class='tiles'>    
+                <p class='info-header'> 
+                    Twitch-Hub is simple twitch API scrubber for building elegant twitch viewing platforms.
+                </p>
+                <img class='stream-hub' src="website.png"> </img>    
+            </span>
+        
+            <span class='tiles'>
+                <p class='how-it-works'> 
+                    First we want to make a table in our database useing the following scheme. 
+                </p>    
+                <table>
+                    <tr>
+                        <th> Field   </th>
+                        <th> Type    </th>
+                        <th> Null    </th>
+                        <th> Key     </th>
+                        <th> Default </th>
+                        <th> Extra   </th>
+                    </tr>
+                    <tr>
+                        <th> Id             </th>
+                        <th> Int (255)      </th>
+                        <th> No             </th>
+                        <th> Primary        </th>
+                        <th> Null           </th>
+                        <th> Auto_increment </th>
+                    </tr>
+                    <tr>
+                        <th> stream_display_name   </th>
+                        <th> varchar (255)         </th>
+                        <th> No                    </th>
+                        <th> </th>
+                        <th> Null                  </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> embed_code     </th>
+                        <th> varchar (255)  </th>
+                        <th> No             </th>
+                        <th> </th>
+                        <th> Null           </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> views          </th>
+                        <th> int (255)      </th>
+                        <th> No             </th>
+                        <th></th>
+                        <th> Null           </th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th> pos            </th>
+                        <th> Int (255)      </th>
+                        <th> No             </th>
+                        <th> </th>
+                        <th> Null           </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th> time           </th>
+                        <th> Int (255)           </th>
+                        <th> No             </th>
+                        <th> </th>
+                        <th> Null           </th>
+                        <th> </th>
+                   </tr>
+                </table>
+                <p class='how-it-works'>
+                    Or just use this line of code in MySQL to create your table.
+                </p>
+                <span class='code'>
+                    <p class='code-text'>
+                        CREATE TABLE live_streams (id INT(255) NOT NULL AUTO_INCREMENT, stream_display_name VARCHAR(255) NOT NULL, embed_code VARCHAR(255) NOT NULL, views INT(255) NOT NULL, pos INT(255) NOT NULL, time INT(255) NOT NULL, PRIMARY KEY (id));
+                    </p>
+                </span>
+            </span>
+            
+            <span class='tiles'>
+                <p class='how-it-works'>
+                    Then we make a Cronjob to run our scrubbing script every minute storing the info in a MySQL database.
+                </p>
+                <span class='code'>
+                    <p class='code-text'> * * * * * cd /var/www/html/exe && ./stream_hub_cron.php >/dev/null 2>/dev/null </p>            
+                </span>
+                <img class='cron-tab' src='crontab.png'></img>
+            </span>
+            
+            <span class='tiles'>
+                <p class='how-it-works'>
+                    Once our Cronjob is made we grab all that info from the database  and encode it into a json object.
+                </p>
+                <img class'jason' src='jsonobj.png'> </img>           
+            </span>
+           
+            <span class='tiles'>
+                <p class='how-it-works'>
+                    Finally we take elements from that object to and style it any way we like.
+                </p>
+                <img class='obj_prop' src='obj_prop.png'></img> 
+            </span>
+        </section>
+
+        <section class='footer'>
+
+        </section>
+    </body>
+<html> 
