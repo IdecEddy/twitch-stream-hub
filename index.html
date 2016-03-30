@@ -63,7 +63,7 @@
         .stream-hub
         {
             opacity:.8;
-            margin-top:50px;
+            margin-top:20px;
             width:500px;
             height:220px;
         }
@@ -156,7 +156,37 @@
             color:black;
             background-color:#4CAF50;
         }
+        .mysql-db-img
+        {
 
+            width: 800px;
+            height: 70;
+        }
+        #demo
+        {
+            border-radius: 20px;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+            border:0;
+            background-color:#333;
+            width:100px;
+            height:50px;
+            padding:5px;
+        }
+        #demo:hover
+        {
+            color:black;
+            background-color:#4CAF50;
+
+        }
+        #demo_link
+        {
+            text-decoration: none;
+        }
         </style>
         <script>
             $(document).ready(function() {
@@ -211,7 +241,19 @@
                 <p class='info-header'> 
                     Twitch-Hub is simple twitch API scrubber for building elegant twitch viewing platforms.
                 </p>
-                <img class='stream-hub' src="website.png"> </img>    
+                <img class='stream-hub' src="twitch-hub.png"> </img>
+                <p class='info-header'>
+                    It works by scrubbing The Twitch API And Storing The information In a Database for later use.  
+                </p>
+                <img class='mysql-db-img' src='mysql-db.png'></img>
+                <p class='info-header'>
+                    we then can take thees elements and build elegent twitch viewing platforms. If you would like to see a demo you can click the link below. 
+                </p>
+                <a id='demo_link' href='http://idecgames.com'>
+                    <div id='demo'>
+                        <h2>DEMO</h2>
+                    </div>
+                </a>
             </span>
         </section>
         <section class='install'> 
